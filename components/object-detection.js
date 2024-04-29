@@ -51,6 +51,10 @@ const ObjectDetection = () => {
         showVideo();
     }, [])
 
+    const videoConstraints = {
+        facingMode: "user"
+      };
+
     return (
         <div className='mt-8'>
             {
@@ -65,6 +69,7 @@ const ObjectDetection = () => {
                             ref={webCamRef}
                             className='rounded-md w-full lg:h-[720px]'
                             muted
+                            videoConstraints={videoConstraints}
                         />
                         {/* Canvas */}
                         <canvas 
